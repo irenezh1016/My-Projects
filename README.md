@@ -1,4 +1,4 @@
-# IMF-Projects
+# My-Projects
 Store codes related to IMF projects
 Project 1: Working paper for Natural Disaster in PICs
 Project 2: Credit Boom
