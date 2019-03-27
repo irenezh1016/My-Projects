@@ -17,12 +17,6 @@ save "C:\Users\HZhang2\Desktop\APD\creditBoom\wbdata.dta",replace
 //Financial development regression dummy
 
 
-//clear
-//import excel "Q:\Data\FSG's Credit Project\Data\Credit Data 012819.xlsx", sheet("Data") firstrow
-//destring Unique, replace
-//save "C:\Users\HZhang2\Desktop\APD\creditBoom\cred-data-2019.dta",replace
-//////////////
-
 clear
 use C:\Users\HZhang2\Desktop\APD\creditBoom\datastata.dta
 //use C:\Users\HZhang2\Desktop\APD\creditBoom\cred-data-2019.dta
@@ -62,32 +56,6 @@ encode Income_IMF, gen(income)
 drop if Year < 1992
 drop if Year ==2017
 drop if missing(Year)
-
-//drop small states and HK Macao
-drop if CountryCode == 624|CountryCode ==	632|CountryCode ==	684|CountryCode ==	716|CountryCode ==	718|CountryCode ==	734|CountryCode ==	514|CountryCode ==	819|CountryCode ==	826	| ///
-	CountryCode ==556	|CountryCode ==867	|CountryCode ==868	|CountryCode ==565 |CountryCode ==862	|CountryCode ==813	|CountryCode ==537	|CountryCode ==866	|CountryCode ==869	|CountryCode ==846| ///
-	CountryCode ==943	|CountryCode ==611	|CountryCode ==311	|CountryCode ==313	|CountryCode ==316	|CountryCode ==339	|CountryCode ==321 |CountryCode ==328	|CountryCode ==336	|CountryCode ==361| ///
-	CountryCode ==362	|CountryCode ==364	|CountryCode ==366	|CountryCode ==369 |CountryCode == 532 |CountryCode ==546
-
-drop if Country=="Belize"
-drop if Country=="Antigua and Barbuda"
-drop if Country=="Aruba"
-drop if Country=="Bahamas, The        "
-drop if Country=="Barbados"
-drop if Country=="Belize"
-drop if Country=="Grenada"
-drop if Country=="Maldives"
-drop if Country=="Samoa"
-drop if Country=="San Marino"
-drop if Country=="Seychelles"
-drop if Country=="St. Kitts and Nevis"
-drop if Country=="St. Lucia"
-drop if Country=="St. Vincent & Grens."
-drop if CountryCode == 758
-drop if CountryCode == 309
-drop if CountryCode == 163
-drop if CountryCode == 359
-drop if CountryCode == 759
 
 //drop if Country == "Zimbabwe" | Country == "Belarus" | Country == "Venezuela, Republica Bolivariana de" | Country == "Zambia"
 
